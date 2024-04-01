@@ -17,7 +17,7 @@ echo "Cloned repository..."
 pwd
 
 echo "Current tree..."
-ls -laR
+find . -maxdepth 3 -type d
 
 echo "Executing commands..."
 echo ${INPUT_ADDITIONAL_COMMANDS}
