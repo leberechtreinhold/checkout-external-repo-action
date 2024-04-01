@@ -15,7 +15,7 @@ git config --global credential.helper cache
 
 git clone -b ${INPUT_GIT_BRANCH} ${INPUT_GIT_REMOTE} ${INPUT_REPO_NAME}
 
-pwd && ls -laR
+pwd && tree -L 3 -g -u -p -d
 
 cd ${INPUT_REPO_NAME}
 
