@@ -1,0 +1,28 @@
+name: checkout-external-repo-action
+description: Checks out a external repository and possibly runs additional commands on it
+branding:
+  icon: git-pull-request
+  color: yellow
+
+inputs:
+  GIT_REMOTE:
+    description: "The remote repository HTTPS url https://github.com/octocat/foo.git. No ssh (git@github.com:octocat/foo.git) supported"
+    required: true
+  GIT_USERNAME:
+    description: "Username for remote repository"
+    required: true
+  GIT_PASSWORD:
+    description: "The git HTTPS password or token for the remote repository"
+    required: true
+  GIT_BRANCH:
+     description: "Branch to do the checkout"
+     default: "master"
+     required: false
+  REPO_NAME:
+    description: "Name of the folder which will contain the repository"
+    default: "repo"
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
