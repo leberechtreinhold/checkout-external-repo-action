@@ -19,6 +19,8 @@ pwd
 echo "Current tree..."
 find . -maxdepth 3 -type d
 
+cd ${INPUT_REPO_NAME}
+
 echo "Executing commands..."
 echo ${INPUT_ADDITIONAL_COMMANDS}
 echo ${INPUT_ADDITIONAL_COMMANDS} > to_run.sh
