@@ -26,7 +26,10 @@ inputs:
     description: "Where to run the command"
     default: "."
     required: false
-
+  ADDITIONAL_COMMANDS:
+    description: "Commands to run on said directory if desired"
+    default: ""
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -17,5 +17,7 @@ echo "Cloned repository..."
 pwd
 
 echo "Current tree..."
-cd ..
-tree -L 3 -g -u -p -d
+ls -laR
+
+echo "Executing commands..."
+eval "${INPUT_ADDITIONAL_COMMANDS}"
