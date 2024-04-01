@@ -24,8 +24,8 @@ cd ${INPUT_REPO_NAME}
 echo "Git credential settings..."
 git config --global credential.user.name "${INPUT_GIT_USER}"
 git config --global credential.user.email "${INPUT_GIT_EMAIL}"
-GIT_AUTHOR_EMAIL=${INPUT_GIT_EMAIL}
-GIT_AUTHOR_NAME=${INPUT_GIT_USER}
+export GIT_AUTHOR_EMAIL=${INPUT_GIT_EMAIL}
+export GIT_AUTHOR_NAME=${INPUT_GIT_USER}
 git config --list
 echo $GIT_AUTHOR_EMAIL
 echo $GIT_AUTHOR_NAME
