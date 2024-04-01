@@ -11,6 +11,14 @@ inputs:
   GIT_USERNAME:
     description: "Username for remote repository"
     required: true
+  GIT_USER:
+    description: "Name of the user, not needed if you are just doing checkouts"
+    default: "git-action"
+    required: false
+  GIT_EMAIL:
+    description: "EMail of the user, not needed if you are just doing checkouts"
+    default: "external-checkout@github.com"
+    required: false
   GIT_PASSWORD:
     description: "The git HTTPS password or token for the remote repository"
     required: true
