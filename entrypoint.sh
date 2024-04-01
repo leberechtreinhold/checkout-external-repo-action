@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if [[ "${DEBUG}" -eq "true" ]]; then
-    set -x
-fi
+cd ${INPUT_WORKING_DIR}
 
 git config --global --add safe.directory /github/workspace
 
@@ -15,8 +13,9 @@ git config --global credential.helper cache
 
 git clone -b ${INPUT_GIT_BRANCH} ${INPUT_GIT_REMOTE} ${INPUT_REPO_NAME}
 
-pwd && tree -L 3 -g -u -p -d
+echo "Cloned repository..."
+pwd
 
-cd ${INPUT_REPO_NAME}
-
-eval(${INPUT_ADDITIONAL_COMMANDS})
+echo "Current tree..."
+cd ..
+tree -L 3 -g -u -p -d

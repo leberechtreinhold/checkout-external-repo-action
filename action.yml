@@ -22,9 +22,9 @@ inputs:
     description: "Name of the folder which will contain the repository"
     default: "repo"
     required: false
-  ADDITIONAL_COMMANDS:
-    description: "Commands to run on said directory if desired"
-    default: ""
+  WORKING_DIR:
+    description: "Where to run the command"
+    default: "."
     required: false
 
 runs:
