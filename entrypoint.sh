@@ -20,4 +20,7 @@ echo "Current tree..."
 ls -laR
 
 echo "Executing commands..."
-eval "${INPUT_ADDITIONAL_COMMANDS}"
+echo ${INPUT_ADDITIONAL_COMMANDS}
+echo ${INPUT_ADDITIONAL_COMMANDS} > to_run.sh
+chmod +x to_run.sh
+./to_run.sh
