@@ -22,6 +22,10 @@ inputs:
     description: "Name of the folder which will contain the repository"
     default: "repo"
     required: false
+  ADDITIONAL_COMMANDS:
+    description: "Commands to run on said directory if desired"
+    default: ""
+    required: false
 
 runs:
   using: 'docker'

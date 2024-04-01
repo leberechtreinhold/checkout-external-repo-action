@@ -18,3 +18,5 @@ git clone -b ${INPUT_GIT_BRANCH} ${INPUT_GIT_REMOTE} ${INPUT_REPO_NAME}
 pwd && ls -laR
 
 cd ${INPUT_REPO_NAME}
+
+eval(${INPUT_ADDITIONAL_COMMANDS})
