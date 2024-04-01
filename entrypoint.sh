@@ -24,6 +24,8 @@ cd ${INPUT_REPO_NAME}
 git config --global credential.user.name "${INPUT_GIT_USER}"
 git config --global credential.user.email "${INPUT_GIT_EMAIL}"
 
+git config --list
+
 echo "Executing commands..."
 echo ${INPUT_ADDITIONAL_COMMANDS}
 echo ${INPUT_ADDITIONAL_COMMANDS} > to_run.sh
